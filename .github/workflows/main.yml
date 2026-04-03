@@ -1,0 +1,19 @@
+name: Portfolio CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Check Files
+      run: ls -la
+
+    - name: Success Message
+      run: echo "Portfolio Build Successful 🚀"
